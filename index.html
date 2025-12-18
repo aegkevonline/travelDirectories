@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Travel Directories — Dummy</title>
+    <meta name="description" content="Dummy travel directories index for development" />
+    <style>
+        :root{
+            --bg:#f7fafc; --card:#fff; --muted:#6b7280; --accent:#0ea5a4;
+            --radius:10px; --maxw:1000px;
+        }
+        *{box-sizing:border-box}
+        body{
+            margin:0;
+            font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background:linear-gradient(180deg,#eef2f7, var(--bg));
+            color:#0f172a;
+            display:flex;
+            justify-content:center;
+            padding:40px 20px;
+        }
+        .container{
+            width:100%;
+            max-width:var(--maxw);
+        }
+        header{
+            display:flex;
+            align-items:center;
+            gap:16px;
+            margin-bottom:20px;
+        }
+        .logo{
+            width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#10b981,#06b6d4);
+            display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;
+            box-shadow:0 4px 14px rgba(2,6,23,0.08);
+        }
+        h1{font-size:20px;margin:0}
+        p.lead{margin:4px 0 0;color:var(--muted);font-size:14px}
+        .search{
+            margin:18px 0;
+            display:flex;
+            gap:8px;
+        }
+        input[type="search"]{
+            flex:1;padding:12px 14px;border-radius:12px;border:1px solid #e6edf3;background:var(--card);
+            outline:none;font-size:14px;
+        }
+        button{
+            padding:0 14px;border-radius:12px;border:0;background:var(--accent);color:#fff;font-weight:600;
+        }
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+            gap:14px;
+        }
+        .card{
+            background:var(--card);padding:12px;border-radius:12px;box-shadow:0 1px 2px rgba(15,23,42,0.04);
+            display:flex;flex-direction:column;gap:10px;
+        }
+        .thumb{
+            height:120px;border-radius:8px;background:linear-gradient(90deg,#fef3c7,#fde68a);
+            display:flex;align-items:center;justify-content:center;color:#92400e;font-weight:700;
+        }
+        .meta{font-size:13px;color:var(--muted)}
+        .title{font-size:15px;margin:0}
+        footer{margin-top:22px;color:var(--muted);font-size:13px;text-align:center}
+        @media (max-width:420px){
+            header{flex-direction:column;align-items:flex-start}
+            .logo{width:48px;height:48px}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">TD</div>
+            <div>
+                <h1>Travel Directories</h1>
+                <p class="lead">A simple dummy index page for travel locations and services</p>
+            </div>
+        </header>
+
+        <div class="search" role="search" aria-label="Search directories">
+            <input type="search" placeholder="Search destinations, hotels, tours..." aria-label="Search" />
+            <button type="button">Search</button>
+        </div>
+
+        <main>
+            <section aria-labelledby="popular-heading">
+                <h2 id="popular-heading" style="font-size:14px;margin:0 0 10px;color:var(--muted)">Popular listings</h2>
+                <div class="grid" id="listings">
+                    <article class="card" tabindex="0">
+                        <div class="thumb" aria-hidden="true">Bali</div>
+                        <div>
+                            <h3 class="title">Ubud — Cultural Villages</h3>
+                            <div class="meta">Island · 1,238 listings</div>
+                        </div>
+                    </article>
+
+                    <article class="card" tabindex="0">
+                        <div class="thumb" aria-hidden="true">NYC</div>
+                        <div>
+                            <h3 class="title">New York City — Urban Guides</h3>
+                            <div class="meta">City · 3,412 listings</div>
+                        </div>
+                    </article>
+
+                    <article class="card" tabindex="0">
+                        <div class="thumb" aria-hidden="true">TKY</div>
+                        <div>
+                            <h3 class="title">Tokyo — Food & Nightlife</h3>
+                            <div class="meta">City · 2,007 listings</div>
+                        </div>
+                    </article>
+
+                    <article class="card" tabindex="0">
+                        <div class="thumb" aria-hidden="true">ALP</div>
+                        <div>
+                            <h3 class="title">Swiss Alps — Mountain Escapes</h3>
+                            <div class="meta">Region · 586 listings</div>
+                        </div>
+                    </article>
+
+                    <article class="card" tabindex="0">
+                        <div class="thumb" aria-hidden="true">ROM</div>
+                        <div>
+                            <h3 class="title">Rome — Historic Sights</h3>
+                            <div class="meta">City · 1,009 listings</div>
+                        </div>
+                    </article>
+
+                    <article class="card" tabindex="0">
+                        <div class="thumb" aria-hidden="true">SYD</div>
+                        <div>
+                            <h3 class="title">Sydney — Beaches & Culture</h3>
+                            <div class="meta">City · 874 listings</div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            Dummy content — replace with real data and routes when ready.
+        </footer>
+    </div>
+</body>
+</html>
